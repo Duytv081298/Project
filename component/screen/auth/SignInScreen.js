@@ -4,6 +4,8 @@ import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
+
+import stylesApp from '../../../styles'
 // import auth from '@react-native-firebase/auth';
 
 export function SignInScreen({ navigation }) {
@@ -60,13 +62,13 @@ export function SignInScreen({ navigation }) {
         });
     };
     return (
-        <View style={styles.container}>
-            <StatusBar backgroundColor='#009387' barStyle="light-content" />
+        <View style={[stylesApp.container, styles.container]}>
+            <StatusBar  barStyle="light-content" />
             <View style={styles.header}>
-                <Text style={styles.text_header}>Welcome!</Text>
+                <Text style={[stylesApp.text_color, styles.text_header]}>Welcome!</Text>
             </View>
 
-            <Animatable.View animation="fadeInUpBig" style={styles.footer}>
+            <Animatable.View animation="fadeInUpBig" style={[stylesApp.view_shadow, styles.footer]}>
                 {data.errorMessage && (
                     <Text style={{ color: 'red' }}>{data.errorMessage}</Text>
                 )}
@@ -109,9 +111,9 @@ export function SignInScreen({ navigation }) {
 
                 <TouchableOpacity
                     onPress={() => navigation.navigate('ResetPasswordScreen')}>
-                    <Text style={{ color: '#009387', marginTop: 15 }}>
+                    <Text style={[stylesApp.text_color, {marginTop: 15 }] }>
                         Forgot password?
-          </Text>
+                    </Text>
                 </TouchableOpacity>
 
                 <View style={styles.button}>
@@ -119,9 +121,9 @@ export function SignInScreen({ navigation }) {
                         // onPress={handleLogin}
                         style={styles.signIn}>
                         <LinearGradient
-                            colors={['#08d4c4', '#01ab9d']}
+                            colors={['#DCD7F5', '#B6A9EA', '#9077F6']}
                             style={styles.signIn}>
-                            <Text style={[styles.textSign,{color: '#fff'}]}>
+                            <Text style={[stylesApp.text_color,styles.textSign]}>
                                 Sign In
                             </Text>
                         </LinearGradient>
@@ -130,12 +132,12 @@ export function SignInScreen({ navigation }) {
                         onPress={() => navigation.navigate('SignUpScreen')}
                         style={[styles.signIn,
                         {
-                            borderColor: '#009387',
+                            borderColor: '#B6A9EA',
                             borderWidth: 1,
                             marginTop: 15,
                         }]}>
                         <Text
-                            style={[styles.textSign, { color: '#009387' }]}>
+                            style={[ stylesApp.text_color,styles.textSign]}>
                             Sign Up
                         </Text>
                     </TouchableOpacity>
@@ -148,7 +150,6 @@ export function SignInScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#009387',
     },
     header: {
         flex: 1,
@@ -165,7 +166,7 @@ const styles = StyleSheet.create({
         paddingVertical: 30,
     },
     text_header: {
-        color: '#fff',
+        
         fontWeight: 'bold',
         fontSize: 30,
     },

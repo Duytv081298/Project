@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { View, Image, Text, StyleSheet, Animated, StatusBar } from 'react-native';
+import stylesApp from '../../styles'
 export class SplashScreen extends Component {
     state = {
         LogoAnime: new Animated.Value(0),
@@ -28,7 +29,7 @@ export class SplashScreen extends Component {
     }
     render() {
         return (
-            <View style={styles.container}>
+            <View style={[stylesApp.container, styles.container]}>
                 <StatusBar backgroundColor='#FBFAFF' barStyle="light-content" />
                 <Animated.View
                     style={{
@@ -46,8 +47,6 @@ export class SplashScreen extends Component {
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#FBFAFF',
         justifyContent: 'center',
         alignItems: 'center',
     }
