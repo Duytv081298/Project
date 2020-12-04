@@ -3,12 +3,14 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'MusicInLifeApp' do
+target 'Mila' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'MusicInLifeAppTests' do
+  pod 'RNReactNativeGetMusicFiles', :path => '../node_modules/react-native-get-music-files'
+
+  target 'MilaTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +25,10 @@ target 'MusicInLifeApp' do
   end
 end
 
-target 'MusicInLifeApp-tvOS' do
-  # Pods for MusicInLifeApp-tvOS
+target 'Mila-tvOS' do
+  # Pods for Mila-tvOS
 
-  target 'MusicInLifeApp-tvOSTests' do
+  target 'Mila-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

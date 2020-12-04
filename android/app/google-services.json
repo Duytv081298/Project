@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1060379758249",
+    "firebase_url": "https://mila-ff1b4.firebaseio.com",
+    "project_id": "mila-ff1b4",
+    "storage_bucket": "mila-ff1b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060379758249:android:68ca46cd69c9ee298623b8",
+        "android_client_info": {
+          "package_name": "com.mila"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060379758249-pop0gru25ntjpu5samh2trvsm8gneqp0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mila",
+            "certificate_hash": "427dd9c1d0a52d0550df4c38a5b0cf090d0a60eb"
+          }
+        },
+        {
+          "client_id": "1060379758249-5g0snq09dsa4ld82u9hraofuolrl5tlr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDygYMYYiFMNO8l6kjl4SeKFp19N3ZO1i4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060379758249-5g0snq09dsa4ld82u9hraofuolrl5tlr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
